@@ -1,0 +1,7 @@
+{
+  "name": "Sefa-Agri & Integrated Business Ventures",
+  "description": "Official corporate website for Sefa-Agri, a premier Ghanaian agribusiness specializing in FDA-certified Natural Aromatic Rice and general merchandise.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
