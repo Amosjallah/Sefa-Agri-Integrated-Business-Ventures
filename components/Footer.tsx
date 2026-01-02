@@ -1,14 +1,13 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { NAV_ITEMS, BUSINESS_INFO } from '../constants';
+import { NAV_ITEMS, BUSINESS_INFO } from '../constants.ts';
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-primary text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-16">
-          {/* Brand Column */}
           <div className="col-span-1 md:col-span-1">
             <Link to="/" className="inline-block mb-8 p-1 bg-white rounded-lg">
               <img 
@@ -22,7 +21,6 @@ const Footer: React.FC = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-secondary font-bold mb-8 text-lg uppercase tracking-widest text-sm">Explore</h4>
             <ul className="space-y-4">
@@ -36,7 +34,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Product Info */}
           <div>
             <h4 className="text-secondary font-bold mb-8 text-lg uppercase tracking-widest text-sm">Featured Brand</h4>
             <p className="text-white font-semibold text-sm mb-4 leading-tight">{BUSINESS_INFO.subsidiary}</p>
@@ -46,7 +43,6 @@ const Footer: React.FC = () => {
             <p className="mt-4 text-xs text-gray-400">Supporting over 500+ local smallholder farmers in the Central Region.</p>
           </div>
 
-          {/* Contact Info */}
           <div>
             <h4 className="text-secondary font-bold mb-8 text-lg uppercase tracking-widest text-sm">Reach Us</h4>
             <ul className="space-y-6 text-gray-400 text-sm">

@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { NAV_ITEMS, BUSINESS_INFO } from '../constants';
+import { NAV_ITEMS, BUSINESS_INFO } from '../constants.ts';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,6 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
@@ -33,7 +32,6 @@ const Navbar: React.FC = () => {
             />
           </Link>
 
-          {/* Desktop Nav */}
           <div className="hidden md:flex space-x-8">
             {NAV_ITEMS.map((item) => (
               <Link
@@ -57,7 +55,6 @@ const Navbar: React.FC = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -76,7 +73,6 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Nav */}
       <div className={`md:hidden absolute w-full bg-white shadow-xl transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen border-t' : 'max-h-0 overflow-hidden'}`}>
         <div className="px-4 pt-2 pb-6 space-y-1">
           {NAV_ITEMS.map((item) => (

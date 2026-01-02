@@ -1,15 +1,15 @@
 
 import React, { Suspense, lazy } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar.tsx';
+import Footer from './components/Footer.tsx';
 
-// Lazy load pages for performance
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
-const Products = lazy(() => import('./pages/Products'));
-const Quality = lazy(() => import('./pages/Quality'));
-const Contact = lazy(() => import('./pages/Contact'));
+// Lazy load pages with explicit extensions
+const Home = lazy(() => import('./pages/Home.tsx'));
+const About = lazy(() => import('./pages/About.tsx'));
+const Products = lazy(() => import('./pages/Products.tsx'));
+const Quality = lazy(() => import('./pages/Quality.tsx'));
+const Contact = lazy(() => import('./pages/Contact.tsx'));
 
 const App: React.FC = () => {
   return (
